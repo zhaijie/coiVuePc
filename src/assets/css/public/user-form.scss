@@ -1,0 +1,86 @@
+.user_form {
+  .form_box, .remind_box {
+    background-color: $bodyBgColor;
+    width: 424px;
+    padding: 0 25px 35px;
+  }
+  .form_box {
+    min-height: 285px;
+    border-right: 2px solid #fff;
+    .result_err {
+      color: $resultColor;
+      line-height: 35px;
+      height: 35px;
+      text-align: center;
+    }
+    .submit_btn {
+      width: 100%;
+    }
+    .btn {
+      height: 36px;
+    }
+
+    .change_phone {
+      margin-top: 12px;
+      span {
+        color: $color;
+        cursor: pointer;
+      }
+    }
+
+    .user_code_input {
+      width: 145px !important;
+    }
+
+    .img_code {
+      height: 38px;
+      float: none;
+    }
+  }
+
+  .remind_box {
+    padding-top: 35px;
+    height: 250px;
+    .remind_info {
+      margin-top: 25px;
+    }
+    .remind_img {
+      float: right;
+      margin-top: 25px;
+    }
+  }
+
+  .input_item {
+    position: relative;
+    margin-bottom: 24px;
+    span {
+      display: inline-block;
+      width: 80px;
+      line-height: 36px;
+    }
+
+    .forget_password {
+      text-align: right;
+      cursor: pointer;
+      margin-top: 5px;
+      color: $color;
+    }
+    .check_tip {
+      left: 90px;
+      top: 45px;
+    }
+  }
+
+  input {
+    width: 270px !important;
+    height: 36px !important;
+    padding-right: 50px !important;
+  }
+
+  .password {
+    background-color: #fff;
+    input {
+      background: url("../../images/icon_jp.png") no-repeat 98% 50%;
+    }
+  }
+}

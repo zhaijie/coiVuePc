@@ -1,0 +1,92 @@
+$container: 1200px;
+$fontColor: #333;
+$grayColor: #999999;
+$color: #3B92FC;
+$inputBorderColor: #ccc;
+$btnColor: #fff;
+$borderRadius: 4px;
+$border: 1px solid #ccc;
+$navBgColor: #fff;
+$footerBgColor: #0e162d;
+$navHeight: 96px;
+$tipBgColor: #F90;
+$bodyBgColor: #f7f7f7;
+$resultColor: #fc403b;
+$trHoverColor: #EBF4FF;
+$riseColor: #40C446;
+$fallColor: #FCAD3B;
+$deleteBtnColor: #FC403B;
+@mixin transformRotate($rotate) {
+  transform: $rotate;
+  -webkit-transform: $rotate;
+  -moz-transform: $rotate;
+  -o-transform: $rotate;
+  -ms-transform: $rotate;
+}
+
+@mixin transformScale($deg) {
+  transform: scale($deg);
+  -webkit-transform: scale($deg);
+  -moz-transform: scale($deg);
+  -o-transform: scale($deg);
+  -ms-transform: scale($deg);
+}
+
+@mixin transition($attr, $time, $type) {
+  transition: $attr $time $type;
+  -webkit-transition: $attr $time $type;
+  -moz-transition: $attr $time $type;
+  -o-transition: $attr $time $type;
+}
+
+//限制行数
+@mixin clamp($line) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  display: -moz-box;
+  -moz-line-clamp: $line;
+  -moz-box-orient: vertical;
+  word-break: break-all;
+}
+
+//弹框
+@mixin alert($bgColor) {
+  position: fixed;
+  background-color: $bgColor;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin selectI() {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  line-height: 10px;
+  border-radius: 50%;
+  border: 2px solid #999;
+  position: relative;
+}
+
+@mixin selection() {
+  border-color: $color;
+  color: $color;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@mixin closeImg($margin) {
+  float: right;
+  margin-top: $margin;
+  margin-right: $margin;
+  cursor: pointer;
+}

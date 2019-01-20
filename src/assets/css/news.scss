@@ -1,0 +1,207 @@
+.news_banner {
+  min-width: $container;
+  img {
+    width: 100%;
+  }
+}
+
+.news_bg {
+  background-color: #fff;
+}
+
+.newsD {
+  position: absolute;
+  bottom: 364px;
+  width: 100%;
+  height: 817px;
+  background: url("../images/new_bg.png") no-repeat bottom;
+}
+
+.news {
+  background: url("../images/new_bg.png") no-repeat bottom;
+}
+
+.news_Content {
+  margin: 0 auto;
+  padding: 33px 0 96px;
+  width: $container;
+  .news_ContentBox {
+    margin: 37px 0 64px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .notData {
+    width: 100%;
+  }
+}
+
+.news_imgBox {
+  display: flex;
+  justify-content: space-between;
+  .news_img {
+    position: relative;
+    width: 384px;
+    height: 216px;
+    opacity: 0.6;
+    border-radius: $borderRadius;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .news_imgTitle {
+      position: absolute;
+      top: 19px;
+      left: 0;
+      width: 100px;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 0 18px 18px 0;
+      color: $color;
+    }
+    .news_imgInfo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 332px;
+      bottom: 0;
+      height: 72px;
+      background: rgba(0, 0, 0, 0.5);
+      color: $btnColor;
+      padding: 0 29px 0 23px;
+      @include clamp(2);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+}
+
+.news_menuBox {
+  font-size: 16px;
+  width: 240px;
+  background-color: $bodyBgColor;
+  height: max-content;
+  .title {
+    padding: 24px 24px 0;
+  }
+  .news_menu {
+    margin-top: 35px;
+    padding: 0 24px;
+    li {
+      height: 40px;
+      line-height: 40px;
+      font-weight: 400;
+      cursor: pointer;
+      font-size: 14px;
+      color: #999;
+      border-bottom: 1px solid #EEEEEE;
+      &:hover {
+        color: $color;
+      }
+    }
+    .newsActive {
+      background: url("../images/icon_next.png") no-repeat right;
+      border-bottom: 1px solid $color;
+      color: $color;
+      background-size: 7px 12px;
+    }
+  }
+  img {
+    margin-top: 84px;
+    width: 100%;
+    height: 183px;
+  }
+}
+
+.news_infoBox {
+  width: 922px;
+  .news_info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #EEEEEE;
+    margin-top: 22px;
+    .news_timeBox {
+      width: 80px;
+      height: 75px;
+      text-align: center;
+      font-size: 12px;
+      border: 1px solid rgba(204, 204, 204, 1);
+      padding-top: 5px;
+      .news_day {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+    .news_infoTextBox {
+      width: 820px;
+      .news_infoTitle {
+        font-size: 20px;
+        font-weight: 400;
+        margin-left: -10px;
+      }
+
+      .news_infoSign {
+        width: 72px;
+        padding: 7px 0;
+        border-bottom: 2px solid #ccc;
+        color: #999;
+      }
+      .news_infoText {
+        margin-top: 25px;
+        width: 819px;
+        height: 38px;
+        @include clamp(2);
+      }
+      .news_checkBtn {
+        width: 120px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        margin-top: 12px;
+      }
+    }
+  }
+}
+
+//资讯详情
+.newsDetail {
+  padding-bottom: 60px;
+  position: relative;
+  z-index: 9;
+  .newsD_header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+    .goBack {
+      font-size: 12px;
+      font-weight: 400;
+      width: 88px;
+      height: 24px;
+      border: 1px solid $color;
+      border-radius: 4px;
+      background: #fff;
+      color: $color;
+    }
+  }
+  .newsD_Content {
+    margin-top: 17px;
+    background-color: #fff;
+    padding: 36px 47px 70px 49px;
+    .newsD_ContentHeader {
+      margin-bottom: 35px;
+      .newsD_title {
+        width: fit-content;
+        height: 21px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        line-height: 16px;
+      }
+    }
+  }
+}

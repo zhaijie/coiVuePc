@@ -1,0 +1,47 @@
+.my_alert {
+  @include alert(rgba(0, 0, 0, .4));
+  .alert_content {
+    width: 400px;
+    padding: 12px 12px 35px;
+    background: #fff;
+    .alert_img {
+      margin-top: 35px;
+      margin-left: 12px;
+      width: 79px;
+      height: 79px;
+    }
+    .alert_text {
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+    .alert_btn {
+      .btn {
+        width: 148px;
+        height: 38px;
+        border: 1px solid $color;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+      .btn + .btn {
+        margin-left: 29px;
+      }
+
+      .cancel_btn {
+        background-color: #fff;
+        border: 1px solid #CCC;
+        color: $fontColor;
+      }
+
+      .delete_btn {
+        background-color: $deleteBtnColor;
+        border: 1px solid $deleteBtnColor;
+      }
+    }
+  }
+  .alert_close {
+    float: right;
+    margin-top: -6px;
+    cursor: pointer;
+  }
+}

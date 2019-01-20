@@ -1,0 +1,47 @@
+$normal: normal;
+$none: none;
+
+/* CSS Document */
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, span, img, div, dl, dt, dd, input, footer, a, button {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "microsoft yahei";
+  font-size: 14px;
+  color: $fontColor;
+  background-color: $bodyBgColor;
+}
+
+img {
+  vertical-align: middle;
+  border: $none;
+}
+
+ul, ol, li {
+  list-style: $none;
+  border: $none;
+
+}
+
+input, select, textarea, button {
+  outline: $none;
+  //background: $none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: $normal;
+}
+
+em, i {
+  font-weight: $normal;
+  font-style: $normal;
+}
+
+/*清除复选框的选择按钮*/
+textarea {
+  resize: $none;
+}
+

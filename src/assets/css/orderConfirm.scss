@@ -1,0 +1,122 @@
+.order_confirm {
+  .crumbs {
+    margin: 46px 0;
+  }
+}
+
+.order_info {
+  background-color: #fff;
+  margin-bottom: 50px;
+  border: 1px solid #eee;
+  table {
+    width: 1200px;
+    font-size: 12px;
+    td:first-child {
+      padding-left: 24px;
+    }
+
+    .product_name {
+      padding: 12px 0;
+      display: flex;
+      align-items: center;
+      p {
+        width: 163px;
+        margin-left: 16px;
+
+      }
+    }
+
+    .coi_price {
+      font-size: 14px;
+      color: $color;
+      font-weight: bold;
+    }
+
+  }
+  thead {
+    tr {
+      line-height: 47px;
+      td {
+        border-bottom: 1px solid #eee;
+      }
+    }
+  }
+
+  .submit_btn {
+    width: 120px;
+    height: 36px;
+    float: right;
+    margin: 12px 25px 23px 0;
+    font-size: 16px;
+  }
+}
+
+.order_address {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+
+  .title {
+    margin-top: 8px;
+  }
+
+  .address_list {
+    margin-left: 24px;
+    li {
+      padding-left: 24px;
+      width: 1022px;
+      cursor: pointer;
+      i {
+        @include selectI();
+        margin-right: 11px;
+        top: 10px;
+        float: left;
+        &.active {
+          @include selection();
+        }
+      }
+
+      span {
+        margin-right: 20px;
+        line-height: 36px;
+      }
+
+      &:hover {
+        background-color: #EBF4FF;
+      }
+      .change_address_btn {
+        float: right;
+        margin-top: 6px;
+      }
+    }
+
+    .btn {
+      border: 1px solid $color;
+      color: $color;
+      background-color: #fff;
+      width: 72px;
+      line-height: 24px;
+      height: 24px;
+      font-size: 12px;
+    }
+
+    .new_address_btn {
+      margin: 15px 0 0 50px;
+    }
+  }
+}
+
+.address_form {
+  width: 430px;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: $borderRadius;
+  .title {
+    font-size: 16px;
+    text-align: center;
+    img {
+      @include closeImg(-12px)
+    }
+  }
+}
+

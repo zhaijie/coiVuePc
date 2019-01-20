@@ -1,0 +1,258 @@
+@mixin cartBtn($imgUrl, $hoverImg) {
+  width: 24px;
+  height: 24px;
+  // background: rgba(255, 255, 255, 1);
+  background: url($imgUrl) no-repeat;
+  border: 1px solid rgba(59, 146, 252, 1);
+  border-radius: 4px;
+  background-position: center;
+  &:hover {
+    background: url($hoverImg) no-repeat;
+    background-color: $color;
+    background-position: center;
+  }
+}
+
+.cartBox {
+  position: relative;
+  .cart {
+    max-height: 1230px;
+    padding-bottom: 56px;
+    overflow-y: auto;
+    min-height: 730px;
+    $pd26: 26px;
+    .tui-checkbox:checked {
+      // background: #1673ff;
+      // border: solid 1px #1673ff;
+    }
+    .tui-checkbox {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      background-color: #ffffff;
+      border: solid 1px #dddddd;
+      // -webkit-border-radiu?s: 50%;
+      // border-radius: 50%;
+      font-size: 18px;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      -webkit-appearance: none;
+      -webkit-user-select: none;
+      user-select: none;
+      -webkit-transition: background-color ease 0.6s;
+      transition: background-color ease 0.6s;
+    }
+
+    .is_check::after {
+      content: '';
+      top: 3px;
+      left: 2px;
+      position: absolute;
+      background: transparent;
+      border: $color solid 2px;
+      border-top: none;
+      border-right: none;
+      height: 4px;
+      width: 8px;
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+    .cart_header {
+      font-size: 14px;
+      width: 945px;
+      // height: 48px;
+      background: $color;
+      color: #fff;
+      th {
+        font-weight: normal;
+      }
+      .cart_allCheck {
+        margin-left: 24px;
+        .title {
+          margin-left: 12px;
+        }
+      }
+      .cart_proInfoTitle {
+        margin-left: 76px;
+      }
+    }
+    table {
+      border-collapse: collapse;
+      tbody {
+        font-size: 12px;
+        color: $fontColor;
+        th {
+          font-weight: normal;
+          padding: 0;
+        }
+        tr {
+          border-bottom: 1px solid #eee;
+        }
+        .cart_itemBox {
+          height: 110px;
+        }
+        .cart_itemCheck {
+          margin-left: 24px;
+          // display: inline-block;
+          // float: left;
+          margin-top: 47px;
+          height: 16px;
+          width: 16px;
+        }
+        .cart_itemImg {
+          margin-top: 12px;
+          margin-left: 12px;
+          width: 88px;
+          height: 88px;
+          // vertical-align: baseline;
+        }
+        .cart_proInfo {
+          // display: inline-block;
+          width: 163px;
+          text-align: left;
+          padding-left: 16px;
+          .cart_proInfoText {
+            margin-top: 24px;
+            // display: inline-block;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+          }
+          .cart_spec {
+            margin-top: 10px;
+            // display: inline-block;
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+        .cart_coiPrice {
+          color: $color;
+          font-weight: bold;
+        }
+        .cart_btnBox {
+          height: 24px;
+          line-height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .cart_reduceBtn, .cart_addBtn {
+            font-size: 24px;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+          }
+          .cart_nums {
+            padding: 0 14px;
+          }
+        }
+        .cart_handleBtn {
+          width: 18px;
+          height: 18px;
+          // background: rgba(255, 255, 255, 1);
+          background: url(../images/icon_edit.png) no-repeat;
+          background-position: -48px -10px;
+          border: none;
+          outline: none;
+          &:hover {
+            background-position: -10px -10px;
+          }
+        }
+      }
+    }
+    .err_ProductBox {
+      .err_ProductTitle {
+        margin-top: 23px;
+        padding-bottom: 9px;
+        border-bottom: 1px solid #eee;
+      }
+      tbody {
+        color: $grayColor;
+        .cart_coiPrice {
+          color: $grayColor;
+          font-weight: bold;
+        }
+        .cart_btnBox {
+          // color: $grayColor;
+        }
+      }
+    }
+    .cart_menuBox {
+      position: absolute;
+      bottom: -24px;
+      left: -24px;
+      width: 998px;
+      height: 56px;
+      background: $color;
+      display: flex;
+      align-items: center;
+      color: #FFFFFF;
+      .cart_allCheck {
+        margin-left: 48px;
+        .title {
+          margin-left: 12px;
+        }
+      }
+      .cart_menuDelete {
+        margin-left: 36px;
+        cursor: pointer;
+        &:hover {
+          color: #FC403B;
+        }
+      }
+      .cart_clearErr {
+        margin-left: 40px;
+        cursor: pointer;
+      }
+      .cart_orange {
+        color: #FCAD3B;
+        font-size: 20px;
+        padding: 0 2px;
+        font-weight: bold;
+      }
+      .allPay {
+        position: relative;
+        top: -7px;
+      }
+      .allPayText {
+        span {
+          padding-top: 10px;
+          font-size: 12px;
+        }
+      }
+      .cart_selectShop {
+        padding-right: 35px;
+      }
+      .payBtn {
+        position: absolute;
+        right: 24px;
+        width: 120px;
+        height: 36px;
+        text-align: center;
+        background: #fff;
+        color: $color;
+        font-size: 16px;
+        &:hover {
+          background-color: #eee;
+        }
+      }
+    }
+  }
+}
+
+.total_box {
+  position: absolute;
+  right: 160px;
+  .allPay_rmb {
+    font-size: 12px !important;
+  }
+}
+
+.total_box > div {
+  display: table-cell;
+  padding-top: 11px;
+}

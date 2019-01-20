@@ -1,0 +1,291 @@
+$userContentWidth: 950px;
+
+.user_bg {
+  background: url("../images/user_bg.png") no-repeat bottom;
+  background-size: contain;
+  .crumbs {
+    line-height: 48px;
+  }
+
+}
+
+.user_content {
+  width: $userContentWidth;
+  padding: 24px;
+  float: right;
+  background-color: #fff;
+  margin-bottom: 70px;
+}
+
+//------------我的资产
+.assets {
+  .title {
+    font-weight: bold;
+    margin-top: -6px;
+    img {
+      cursor: pointer;
+    }
+  }
+  .asset_count {
+    padding: 20px 35px;
+    height: 95px;
+    background-color: $bodyBgColor;
+    .coi_fl {
+      width: 64px;
+      text-align: center;
+      p {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+    }
+    .coi_fr {
+      width: calc(100% - 148px);
+      margin-top: 8px;
+      margin-left: 84px;
+      div {
+        width: 33.33%;
+        float: left;
+      }
+
+      .count {
+        font-size: 28px;
+        font-weight: bold;
+        position: relative;
+        top: 10px;
+      }
+      .count_cny {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .turn_out, .turn_in {
+    margin-top: 45px;
+    .title {
+      margin-bottom: 10px;
+    }
+  }
+  .turn_out {
+    input[type=number] {
+      padding-right: 0 !important;
+      width: 320px !important;
+    }
+
+    .remind_box {
+      height: 284px;
+      .remind_img {
+        margin-top: -10px;
+      }
+    }
+  }
+
+  .turn_in {
+    margin-bottom: 40px;
+    .turn_in_info {
+      padding: 23px 24px;
+      background-color: $bodyBgColor;
+      .remind_text {
+        color: $resultColor;
+      }
+      .address {
+        font-weight: bold;
+        font-size: 28px;
+        margin-top: 30px;
+      }
+      .copy_btn {
+        width: 120px;
+        height: 36px;
+        margin-top: 6px;
+      }
+
+      .copy_input {
+        opacity: 0;
+      }
+      .address_code {
+        text-align: center;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+//------------线下众筹
+.fundraising {
+  .fundraising_contact {
+    background-color: #f7f7f7;
+    margin-top: 10px;
+    padding: 35px;
+    //background: url('../images/icon_fundraising.png') no-repeat right;
+    li {
+      margin-bottom: 35px;
+      display: flex;
+      align-items: center;
+      line-height: 24px;
+      cursor: pointer;
+      i {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-right: 13px;
+        background-image: url('../images/icon_contact.png')
+      }
+      i.wx {
+        background-position: -10px -10px;
+      }
+      i.phone {
+        background-position: -10px -54px;
+      }
+      i.qq {
+        background-position: -54px -10px;
+      }
+      i.email {
+        background-position: -54px -54px;
+      }
+    }
+  }
+
+  .fundraising_img {
+    float: right;
+    margin-top: -257px;
+    margin-right: 35px;
+  }
+}
+
+//-------邀请好友
+@mixin inviteTable {
+  width: 33.33%;
+  height: 48px;
+  line-height: 48px;
+  float: left;
+}
+
+.invite_info {
+  padding: 35px 50px 18px;
+  margin-top: 5px;
+  background-color: $bodyBgColor;
+
+  p + p {
+    margin-top: 10px;
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .btn {
+    height: 24px;
+    width: 64px;
+    font-size: 12px;
+    margin-left: 20px;
+  }
+  input {
+    opacity: 0;
+  }
+}
+
+.invite_friend {
+  margin-top: 50px;
+  .title {
+    font-weight: bold;
+  }
+
+  .invite_table {
+    margin-top: 10px;
+    width: 520px;
+
+    .table_body {
+      min-height: 279px;
+      max-height: 490px;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .table_title {
+      padding-left: 20px;
+      background-color: $color;
+      color: #fff;
+      div {
+        @include inviteTable
+      }
+    }
+
+    .table_item {
+      width: 510px;
+      margin: 0 auto;
+      border-bottom: 1px solid $inputBorderColor;
+      cursor: pointer;
+      &:hover {
+        background-color: $trHoverColor;
+      }
+      div {
+        @include inviteTable;
+        position: relative;
+        left: 10px;
+      }
+      div:first-child {
+        left: 15px;
+      }
+    }
+  }
+}
+
+.invite_img {
+  float: right;
+  margin-top: -279px;
+}
+
+//----------user_table
+.table_box {
+  height: 624px;
+  margin-bottom: 65px;
+}
+
+.user_table {
+  tr {
+    height: 48px;
+    td:first-child {
+      padding-left: 26px;
+    }
+  }
+  thead {
+    color: #fff;
+    tr {
+      background-color: $color;
+    }
+  }
+
+  tbody {
+    font-size: 12px;
+    td {
+      border-bottom: 1px solid #eee;
+      &.rise_count {
+        color: $riseColor;
+        font-weight: bold;
+      }
+      &.fall_count {
+        color: $fallColor;
+        font-weight: bold;
+      }
+      .trade_td {
+        width: 130px;
+        word-wrap: break-word;
+        word-break: normal;
+      }
+
+    }
+    tr:hover {
+      background-color: $trHoverColor
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

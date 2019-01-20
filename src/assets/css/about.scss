@@ -1,0 +1,90 @@
+.about_img {
+  min-width: $container;
+  img {
+    width: 100%;
+  }
+}
+
+.about_bg {
+  background: url("../../assets/images/about_introduce_bg.png") no-repeat bottom;
+  padding-bottom: 64px;
+}
+
+.about_introduce {
+  margin: 70px auto 0;
+  width: $container;
+  .title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 35px;
+    background: url("../../assets/images/about_title_bg.png") no-repeat center;
+  }
+
+  .coi_fl {
+    width: 480px;
+    height: 280px;
+  }
+
+  .coi_fr {
+    width: 672px;
+    line-height: 31px;
+    .about_issue {
+      width: 100%;
+      height: 97px;
+      background: url("../images/issue.png") no-repeat;
+      background-size: contain;
+      color: $color;
+      display: flex;
+      align-items: center;
+      p {
+        text-align: center;
+        float: left;
+        width: 50%;
+        font-size: 20px;
+        &:first-child {
+          border-right: 1px solid $color;
+        }
+      }
+    }
+  }
+}
+
+.about_paper {
+  background-color: #fff;
+  min-width: $container;
+  padding: 47px 0 70px;
+
+  .coi_fl, .coi_fr {
+    width: 580px;
+    img {
+      width: 100%
+    }
+    .btn {
+      display: block;
+      width: 180px;
+      height: 36px;
+      margin: 37px auto 0;
+    }
+  }
+
+  .coi_fr {
+    position: relative;
+  }
+
+  .app_code {
+    width: 200px;
+    height: 200px;
+    background: rgba(59, 146, 252, .8);
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+    border-radius: $borderRadius;
+    .app_img {
+      width: 167px;
+      margin-top: 16px;
+    }
+  }
+
+}

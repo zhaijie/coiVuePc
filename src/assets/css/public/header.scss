@@ -1,0 +1,86 @@
+@mixin navA {
+  display: inline-block;
+  padding-top: 24px;
+}
+
+$navMarginLeft: 47px;
+
+.header {
+  //height: $navHeight;
+  align-items: center;
+  position: fixed;
+  background-color: $navBgColor;
+  top: 0;
+  min-width: $container;
+  width: 100%;
+  z-index: 999;
+
+  .header_top {
+    line-height: 32px;
+    background-color: #0E162D;
+    font-size: 12px;
+
+    a {
+      float: left;
+      color: $color;
+      text-decoration: underline;
+      width: 142px;
+      @include clamp(1);
+    }
+
+    img.coi_fl {
+      margin-top: 10px;
+      margin-right: 5px;
+    }
+
+    span {
+      color: #999999;
+      cursor: pointer;
+      img {
+        position: relative;
+        top: -2px;
+      }
+    }
+  }
+
+  .logo_img {
+    margin-top: 12px;
+  }
+
+  nav {
+    height: 64px;
+    a {
+      @include navA;
+      padding-bottom: 12px;
+      &.active {
+        border-bottom: 4px solid $color;
+        color: $color;
+      }
+    }
+    a + a {
+      margin-left: $navMarginLeft;
+    }
+
+    p {
+      width: 54px;
+      height: 4px;
+      background-color: $color;
+    }
+  }
+
+  .form_box {
+    margin-left: $navMarginLeft;
+    a {
+      @include navA;
+      width: 45px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    position: absolute;
+    min-width: 1200px;
+  }
+}

@@ -1,0 +1,33 @@
+/*关于COI app下载二维码动画*/
+.about-fade-enter-active {
+  transition: all .3s ease;
+}
+
+.about-fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.about-fade-enter, .about-fade-leave-to {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+/*客服信息动画*/
+.contact-fade-enter-active {
+  transition: all .8s ease;
+}
+
+.contact-fade-leave-active {
+  transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.contact-fade-enter {
+  transform: translateX(160px);
+  opacity: 0;
+}
+
+.contact-fade-leave-to {
+  opacity: 0;
+}
+
+

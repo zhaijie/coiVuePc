@@ -1,0 +1,73 @@
+.market {
+  background-color: #1F2843;
+  padding: 36px 0 48px;
+  .kine_header {
+    height: 45px;
+    width: 1151px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 0 24px;
+
+    .coi_fl {
+      line-height: 48px;
+      color: #999;
+      img {
+        float: left;
+        margin-top: 4px;
+        margin-right: 12px;
+      }
+      span {
+        margin-right: 25px;
+      }
+
+      .name {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .rise {
+        color: $riseColor;
+        font-weight: bold;
+      }
+
+    }
+
+    .coi_fr {
+      display: table;
+      margin-top: 4px;
+      div {
+        display: table-cell;
+        text-align: center;
+        padding-left: 45px;
+      }
+      p {
+        font-size: 12px;
+        color: #999;
+      }
+      span {
+        font-weight: bold;
+      }
+
+    }
+  }
+
+  .k_iframe {
+    width: 1175px;
+    margin: 0 auto;
+    padding: 12px;
+    background-color: #0E162D;
+    iframe {
+      border: none;
+    }
+  }
+
+  .trade_btn {
+    display: block;
+    line-height: 36px;
+    height: 36px;
+    width: 120px;
+    font-size: 16px;
+    margin: 36px auto 0;
+  }
+}

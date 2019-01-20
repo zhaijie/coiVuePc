@@ -1,0 +1,122 @@
+.order {
+    .marginT11 {
+      margin-top: 11px;
+    }
+
+    .orderStatusList {
+      width: max-content;
+      .orderItem {
+        float: left;
+        cursor: pointer;
+        &.active {
+          color: $color;
+        }
+        span {
+          padding: 0 24px;
+
+          &:hover {
+            color: $color;
+          }
+        }
+      }
+      .orderItem + .orderItem {
+        padding-bottom: 35px;
+        span {
+          border-left: 1px solid #ccc;
+        }
+      }
+    }
+  }
+
+  .orderBox {
+    border: 1px solid #eeeeee;
+    color: $fontColor;
+    margin: 12px 0;
+    .orderTitle {
+      background: $bodyBgColor;
+      padding: 12px 24px 11px 23px;
+      font-size: 12px;
+    }
+    .orderContent {
+      padding: 0 0 0 23px;
+      font-size: 12px;
+      th {
+        font-weight: normal;
+        padding: 11px 0;
+      }
+
+      th + th {
+        border-left: 1px solid #eeeeee;
+      }
+
+      .orderDetailBtn {
+        width: 64px;
+        height: 24px;
+        line-height: 24px;
+        display: block;
+        margin: 11px auto 0;
+      }
+      .whiteBtn {
+        background: $btnColor;
+        color: $color;
+        border: 1px solid $color;
+        display: block;
+        margin: 11px auto 0;
+        padding: 0px 5px;
+        line-height:22px;
+        border-radius: $borderRadius;
+        &:hover {
+          background-color: #eee;
+        }
+      }
+
+      .coiPay {
+        font-weight: bold;
+        color: $color;
+      }
+      .grayFont {
+        color: $grayColor;
+      }
+      .allMon {
+        background: $bodyBgColor;
+      }
+      .btnHandle {
+        padding: 2px;
+        width: fit-content;
+        margin: 0 auto;
+      }
+    }
+  }
+
+   .orderFooter {
+      border: 1px solid #eeeeee;
+      border-top: none;
+      padding: 12px 24px 11px 41px;
+      font-size: 12px;
+      .adressIcon {
+        margin-right: 12px;
+      }
+      span {
+        display: inline-block;
+        height: 20px;
+        line-height: 20px;
+      }
+      span + span {
+        margin-left: 23px;
+      }
+      .mar_l46 {
+        margin-left: 46px;
+      }
+    }
+
+      .retBtn {
+              width: 64px;
+              height: 24px;
+              border: 1px solid $color;
+              border-radius: 4px;
+              background: #fff;
+              color: $color;
+              &:hover {
+                background-color: #eee;
+              }
+            }

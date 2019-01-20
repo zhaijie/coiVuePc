@@ -1,0 +1,243 @@
+$imgWidth: 400px;
+@mixin decBox {
+  float: left;
+  margin-top: 23px;
+  border: 1px solid #eee;
+}
+
+.product_detail {
+  margin-top: 35px;
+}
+
+.crumbs {
+  .coi_fl {
+    line-height: 36px;
+  }
+  .col_fr {
+    width: 50%;
+  }
+}
+
+.product_search {
+  width: 550px !important;
+}
+
+.product_info {
+  margin-top: 40px;
+  .product_img {
+    float: left;
+    width: $imgWidth;
+
+    .main_img {
+      cursor: pointer;
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+      .magnifier {
+        width: 200px;
+        height: 200px;
+        cursor: move;
+        position: absolute;
+        z-index: 1;
+        background: rgba(59, 146, 252, 0.2);
+      }
+      img {
+        position: absolute;
+      }
+    }
+
+    img {
+      width: $imgWidth;
+    }
+    .img_list {
+      width: $imgWidth;
+      margin-top: 10px;
+      .img_item {
+        width: 72px;
+        float: left;
+        cursor: pointer;
+        img {
+          width: 72px;
+          height: 72px;
+        }
+      }
+      .img_item + .img_item {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .detail {
+    float: right;
+    width: $container - $imgWidth - 20px;
+    margin-left: 20px;
+    position: relative;
+    .magnifier_img {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      overflow: hidden;
+      img {
+        position: absolute;
+        width: 800px;
+        height: 800px;
+        border: 1px solid #eee;
+      }
+    }
+    .title {
+      color: #999;
+      font-size: 14px;
+      font-weight: normal;
+    }
+    .name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .price_coi {
+      font-weight: bold;
+      color: $color;
+      font-size: 28px;
+      margin-top: 35px;
+    }
+
+    .price_cny {
+      color: #333;
+      font-weight: bold;
+    }
+
+    .spec {
+      margin-top: 65px;
+      i {
+        cursor: pointer;
+        margin-left: 10px;
+        display: inline-block;
+        padding: 0 11px;
+        line-height: 36px;
+        border-radius: $borderRadius;
+        background-color: #fff;
+        border: 1px solid #eee;
+        &.active {
+          border: none;
+          background-color: $color;
+          color: #fff;
+        }
+      }
+    }
+
+    .number {
+      margin-top: 24px;
+      .btn {
+        border: 1px solid $color;
+        background-color: #fff;
+        color: $color;
+        width: 36px;
+        margin-left: 10px;
+        font-size: 24px;
+        &:hover {
+          background-color: $color;
+          color: #fff;
+        }
+      }
+      i {
+        margin-left: 10px;
+        font-size: 16px;
+        display: inline-block;
+        width: 20px;
+        text-align: center;
+      }
+
+      .inventory {
+        margin-left: 40px;
+      }
+    }
+
+    .handle_btn {
+      margin-top: 88px;
+      .btn {
+        width: 120px;
+        border: 1px solid $color;
+        font-size: 16px;
+      }
+
+      .btn + .btn {
+        margin-left: 24px;
+      }
+
+      .cart_btn {
+        background-color: #fff;
+        color: $color;
+      }
+    }
+
+    .btn {
+      height: 34px;
+      line-height: 34px;
+    }
+  }
+}
+
+.product_dec {
+  background-color: #fff;
+  margin-top: 35px;
+  padding-bottom: 80px;
+  .dec {
+    @include decBox;
+    width: 894px;
+    .content {
+      padding: 25px;
+    }
+  }
+  .recommend {
+    @include decBox;
+    width: 282px;
+    margin-left: 20px;
+    .content {
+      padding: 25px;
+    }
+  }
+
+  .title {
+    background-color: #f7f7f7;
+    line-height: 48px;
+    font-size: 16px;
+    padding: 0 23px;
+  }
+}
+
+@mixin newProductBox($position) {
+  width: 234px;
+  height: 234px;
+  position: $position;
+  border-radius: $borderRadius;
+  cursor: pointer;
+}
+
+.new_product_item + .new_product_item {
+  margin-top: 23px;
+}
+
+.new_product_item {
+  @include newProductBox(relative);
+  float: left;
+  .new_product_name {
+    @include newProductBox(absolute);
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    background-color: rgba(0, 0, 0, .4);
+    p {
+      margin: 0 0 12px 12px;
+      color: #fff;
+      @include clamp(1);
+      &.product_price {
+        margin-bottom: 0;
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  img {
+    @include newProductBox(absolute);
+  }
+}

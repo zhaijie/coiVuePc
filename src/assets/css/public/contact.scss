@@ -1,0 +1,65 @@
+@mixin divCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  li {
+    @include divCenter;
+    position: relative;
+    height: 48px;
+    width: 48px;
+    background-color: $color;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    cursor: pointer;
+    color: #fff;
+    .contact_info {
+      @include divCenter;
+      position: absolute;
+      width: 132px;
+      text-align: center;
+      height: 36px;
+      background-color: $color;
+      font-size: 12px;
+      left: -140px;
+      border-radius: $borderRadius;
+    }
+    i {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-image: url('../../images/contact_server.png');
+      &.icon_top {
+        background-position: -10px -10px;
+      }
+      &.contact_icon0 {
+        background-position: -54px -10px;
+      }
+      /**
+       &.contact_icon1 {
+         background-position: -10px -54px;
+       }
+        */
+      &.contact_icon1 {
+        background-position: -54px -54px;
+      }
+      &.contact_icon2 {
+        background-position: -98px -10px;
+      }
+      &.contact_icon3 {
+        background-position: -98px -54px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .contact {
+    right: 10px;
+  }
+}
